@@ -1,6 +1,3 @@
-echo "Tag"
-grep -rho '[ :]\(@\w\+\)' --include="*.org" RoamNotes/ | sed 's/[ :]\(@\w\+\)/\1/' | sort | uniq > tag.txt
-
 echo "Clean"
 echo "" > .tmpMessage
 for i in `git ls-files --modified`;

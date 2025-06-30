@@ -1,1 +1,7 @@
 
+FILE:Commit.sh
+-echo "Tag"
+-grep -rho '[ :]\(@\w\+\)' --include="*.org" RoamNotes/ | sed 's/[ :]\(@\w\+\)/\1/' | sort | uniq > tag.txt
+-
+FILE:tag.txt
+FILE:test.org
