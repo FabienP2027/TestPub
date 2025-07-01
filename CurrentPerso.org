@@ -1,0 +1,52 @@
+:PROPERTIES:
+:ID:       974f3178-9c86-4b6a-b8c4-509210ddfbad
+:END:
+#+TODO: TODO(t) INFO(i) WAITING(w) DELEGATE(e) NEXT(n) PROJET(p) DONE(d)
+#+STARTUP: overview indent nologdone nologrepeat nolognoteclock-out nologreschedule nologredeadline nologrefile
+#+title: @CurrentPerso
+#+FILETAGS: @Personnel
+
+* TODO Vérifier les frais de 2% sur Abeille et [[id:b808164a-fb3c-479a-9975-84d5d0ce32aa][PERP-SwissLife]]
+* TODO Acheter chaussure t'ai chi
+DEADLINE: <2025-06-28 sam.>
+* TODO [#B] Passer au louvre pour prendre la carte louvre
+* TODO Ecouter https://www.radiofrance.fr/dossiers/france-culture-avec-vous-a-la-bnf-francois-mitterrand?at_campaign=apocalypse_hier_et_demain&at_medium=repreneurs&at_chaine=france_culture
+SCHEDULED: <2025-07-12 sam.>
+* PROJET Prélèvement BOTIN :@Travail:
+** [2025-06-16 lun.]DONE Signer autorisation de prélèvements
+SCHEDULED: <2025-06-17 mar.>
+** WAITING Autorisation de prélèvement dans [[id:470663f4-2c18-4457-925e-4317d9086639][SocieteGenerale]]
+SCHEDULED: <2025-07-25 ven.>
+* TODO Medoc dentiste => Manque le gel buccal : Chlorhexdine digluonate 0,2% en ruptude de stock
+DEADLINE: <2025-07-17 jeu.>
+* TODO Continuer [[id:02448076-1741-4091-8ff6-4f575f26f34c][AnalyseTransactionnel]] :@Travail:
+* PROJET Beaume
+aller avec [[id:da73d381-f6ba-4a0f-9c6e-ed72c9bde735][AgnesORLHAC]] en voiture, retour avec [[id:428cbf08-06d2-4dff-93d4-c2e86a029812][MarcSchmidtLeRoi]] en train
+** TODO Réserver train retour Beaune :@MarcSchmidtLeRoi:
+SCHEDULED: <2025-07-11 ven.>
+MarcSchmidtLeRoi revient avec nous le dimanche soir
+* PROJET Organiser week-end avec CedricPRESTAVOINE
+avec ou sans les femmes ?
+* PROJET Faire donnation derniers vivant
+** TODO Faire auprès d'un notaire
+** DELEGATE Parler de la donnation derniers vivant :@Zineb:
+* TODO Aller faire un du baby foot
+https://www.ffft.fr/paris-officiel-football-de-table
+5 Rue d'Alsace
+75010 PARIS
+* TODO Organiser un resto avec MufaFARIG et ValerieTURJMAN
+SCHEDULED: <2025-07-01 mar.>
+* PROJET VacanceOctobre
+:PROPERTIES:
+:ID:       968e2a3e-ad50-4eb0-9652-ef4d714e7adc
+:END:
+** WAITING Avoir date VacanceOctobre :@Zineb:
+SCHEDULED: <2025-07-11 ven.>
+** WAITING Changer date VacanceOctobre :@Travail:
+SCHEDULED: <2025-07-18 ven.>
+* TODO Prendre rdv podologue
+SCHEDULED: <2025-10-03 ven.>
+* TODO Réserver theatre
+SCHEDULED: <2025-07-11 ven.>
+https://www.portestmartin.com/la-seconde-surprise-de-l-amour
+** TODO Réserver theatre avec argent CSE et Glady mettre sur ticktack
