@@ -8,7 +8,7 @@
 
 * TODO Vérifier les frais de 2% sur Abeille et [[id:b808164a-fb3c-479a-9975-84d5d0ce32aa][PERP-SwissLife]]
 * TODO Acheter chaussure t'ai chi
-DEADLINE: <2025-06-28 sam.>
+SCHEDULED: <2025-07-05 sam.>
 * TODO [#B] Passer au louvre pour prendre la carte louvre
 * TODO Ecouter https://www.radiofrance.fr/dossiers/france-culture-avec-vous-a-la-bnf-francois-mitterrand?at_campaign=apocalypse_hier_et_demain&at_medium=repreneurs&at_chaine=france_culture
 SCHEDULED: <2025-07-12 sam.>
@@ -35,7 +35,7 @@ https://www.ffft.fr/paris-officiel-football-de-table
 5 Rue d'Alsace
 75010 PARIS
 * TODO Organiser un resto avec MufaFARIG et ValerieTURJMAN
-SCHEDULED: <2025-07-01 mar.>
+SCHEDULED: <2025-07-11 ven.>
 * PROJET VacanceOctobre
 :PROPERTIES:
 :ID:       968e2a3e-ad50-4eb0-9652-ef4d714e7adc
