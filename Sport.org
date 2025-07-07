@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       974f3178-9c86-4b6a-b8c4-509210xdgbad
+:END:
+#+TODO: TODO(t) INFO(i) WAITING(w) DELEGATE(e) NEXT(n) PROJET(p) DONE(d)
+#+STARTUP: overview indent nologdone nologrepeat nolognoteclock-out nologreschedule nologredeadline nologrefile
+#+title: @SportSemaine
+#+FILETAGS: @Personnel
+
+* Lundi
+Soir : Endurance fondamental en salle
+/Soir : tai chi Bernadette
+* Mardi
+Soir : HIIT
+* Mercredi
+Soir : Méditation
+* Jeudi
+Matin ou Midi : Gainage
+soir : Yoga
+/Soir : tai chi Didier
+* Vendredi
+/Piscine
+* Samedi
+Matin : Endurance fondamental en salle et étirement sur 2h
+* Dimanche
+Taichi
+Yoga

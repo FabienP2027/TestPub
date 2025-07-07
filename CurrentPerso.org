@@ -5,16 +5,16 @@
 #+STARTUP: overview indent nologdone nologrepeat nolognoteclock-out nologreschedule nologredeadline nologrefile
 #+title: @CurrentPerso
 #+FILETAGS: @Personnel
-
+* Achat
+** TODO Acheter chaussure t'ai chi
+SCHEDULED: <2025-07-11 ven.>
 * TODO Vérifier les frais de 2% sur Abeille et [[id:b808164a-fb3c-479a-9975-84d5d0ce32aa][PERP-SwissLife]]
-* TODO Acheter chaussure t'ai chi
-SCHEDULED: <2025-07-05 sam.>
+SCHEDULED: <2025-07-13 dim.>
 * TODO [#B] Passer au louvre pour prendre la carte louvre
 * TODO Ecouter https://www.radiofrance.fr/dossiers/france-culture-avec-vous-a-la-bnf-francois-mitterrand?at_campaign=apocalypse_hier_et_demain&at_medium=repreneurs&at_chaine=france_culture
 SCHEDULED: <2025-07-12 sam.>
-* PROJET Prélèvement BOTIN :@Travail:
+* PROJET Prélèvement BOTIN
 ** [2025-06-16 lun.]DONE Signer autorisation de prélèvements
-SCHEDULED: <2025-06-17 mar.>
 ** WAITING Autorisation de prélèvement dans [[id:470663f4-2c18-4457-925e-4317d9086639][SocieteGenerale]]
 SCHEDULED: <2025-07-25 ven.>
 * TODO Medoc dentiste => Manque le gel buccal : Chlorhexdine digluonate 0,2% en ruptude de stock

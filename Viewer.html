@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste Org-mode</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            background-color: #f9f9f9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .org-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        #file-input {
+            display: none;
+        }
+        .file-input-label {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background 0.2s;
+        }
+        .file-input-label:hover {
+            background: #2980b9;
+        }
+        #filename {
+            font-style: italic;
+            color: #7f8c8d;
+        }
+        .org-item {
+            background: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .org-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .todo-TODO {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .todo-DONE {
+            color: #2ecc71;
+            text-decoration: line-through;
+        }
+        .org-tags {
+            float: right;
+        }
+        .org-tag {
+            display: inline-block;
+            background: #e0e0e0;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.8em;
+            margin-left: 5px;
+        }
+        .org-content {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        pre {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 3px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            background: #f5f5f5;
+            padding: 2px 4px;
+            border-radius: 2px;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="org-header">
+        <h1>Contenu Org-mode</h1>
+        <div>
+            <label for="file-input" class="file-input-label">
+                Charger un fichier .org
+            </label>
+            <span id="filename">Aucun fichier chargé</span>
+        </div>
+    </div>
+    
+    <input type="file" id="file-input" accept=".org" />
+    <div id="org-list"></div>
+
+    <script>
+        const orgListElement = document.getElementById('org-list');
+        const fileInput = document.getElementById('file-input');
+        const filenameElement = document.getElementById('filename');
+
+        fileInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            
+            filenameElement.textContent = file.name;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const orgContent = parseOrgFile(e.target.result);
+                renderOrgList(orgContent);
+            };
+            reader.readAsText(file);
+        });
+
+        function parseOrgFile(content) {
+            const lines = content.split('\n');
+            const items = [];
+            let currentItem = null;
+            let contentBuffer = [];
+            
+            lines.forEach(line => {
+                const headerMatch = line.match(/^(\*+)\s(.*)/);
+                if (headerMatch) {
+                    // Sauvegarder l'item précédent s'il existe
+                    if (currentItem) {
+                        currentItem.content = contentBuffer.join('\n').trim();
+                        items.push(currentItem);
+                        contentBuffer = [];
+                    }
+                    
+                    const level = headerMatch[1].length;
+                    let title = headerMatch[2].trim();
+                    
+                    // Extraire TODO/DONE
+                    let todoState = null;
+                    const todoMatch = title.match(/^(TODO|DONE)\s/);
+                    if (todoMatch) {
+                        todoState = todoMatch[1];
+                        title = title.replace(/^(TODO|DONE)\s/, '');
+                    }
+                    
+                    // Extraire les tags
+                    let tags = [];
+                    const tagsMatch = title.match(/:([\w:@]+):$/);
+                    if (tagsMatch) {
+                        tags = tagsMatch[1].split(':').filter(t => t);
+                        title = title.replace(/:[\w:@]+:$/, '').trim();
+                    }
+                    
+                    currentItem = {
+                        level,
+                        title,
+                        todo: todoState,
+                        tags,
+                        content: ""
+                    };
+                } else if (currentItem) {
+                    contentBuffer.push(line);
+                }
+            });
+            
+            // Ajouter le dernier item
+            if (currentItem) {
+                currentItem.content = contentBuffer.join('\n').trim();
+                items.push(currentItem);
+            }
+            
+            return items;
+        }
+
+        function renderOrgList(items) {
+            orgListElement.innerHTML = '';
+            
+            if (items.length === 0) {
+                orgListElement.innerHTML = '<p>Aucun contenu trouvé.</p>';
+                return;
+            }
+            
+            items.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.className = 'org-item';
+                
+                // Titre
+                const titleElement = document.createElement('div');
+                titleElement.className = 'org-title';
+                
+                // TODO/DONE
+                if (item.todo) {
+                    const todoSpan = document.createElement('span');
+                    todoSpan.className = `todo-${item.todo}`;
+                    todoSpan.textContent = `${item.todo} `;
+                    titleElement.appendChild(todoSpan);
+                }
+                
+                // Texte du titre
+                titleElement.appendChild(document.createTextNode(item.title));
+                
+                // Tags
+                if (item.tags && item.tags.length > 0) {
+                    const tagsSpan = document.createElement('span');
+                    tagsSpan.className = 'org-tags';
+                    item.tags.forEach(tag => {
+                        const tagSpan = document.createElement('span');
+                        tagSpan.className = 'org-tag';
+                        tagSpan.textContent = tag;
+                        tagsSpan.appendChild(tagSpan);
+                    });
+                    titleElement.appendChild(tagsSpan);
+                }
+                
+                itemElement.appendChild(titleElement);
+                
+                // Contenu
+                if (item.content) {
+                    const contentElement = document.createElement('div');
+                    contentElement.className = 'org-content';
+                    contentElement.innerHTML = formatOrgContent(item.content);
+                    itemElement.appendChild(contentElement);
+                }
+                
+                orgListElement.appendChild(itemElement);
+            });
+        }
+
+        function formatOrgContent(content) {
+            // Blocs de code
+            content = content.replace(/^#\+BEGIN_SRC (.+?)\n([\s\S]*?)\n#\+END_SRC/gm, 
+                '<pre><code class="language-$1">$2</code></pre>');
+            
+            // Listes
+            content = content.replace(/^\s*-\s(.*)/gm, '<li>$1</li>');
+            content = content.replace(/(<li>.*<\/li>)+/g, '<ul>$&</ul>');
+            
+            // Liens
+            content = content.replace(/\[\[(.*?)\]\[(.*?)\]\]/g, '<a href="$1">$2</a>');
+            
+            // Texte en gras
+            content = content.replace(/\*(.*?)\*/g, '<strong>$1</strong>');
+            
+            // Texte en italique
+            content = content.replace(/\/(.*?)\//g, '<em>$1</em>');
+            
+            // Paragraphes
+            content = content.split('\n\n').join('</p><p>');
+            content = '<p>' + content + '</p>';
+            
+            return content;
+        }
+    </script>
+</body>
+</html>
