@@ -6,8 +6,12 @@
 #+title: @CurrentPerso
 #+FILETAGS: @Personnel
 * Achat
-** TODO Acheter chaussure t'ai chi
+** Decathlon
+*** TODO Acheter chaussure t'ai chi
 SCHEDULED: <2025-07-11 ven.>
+*** TODO Acheter short de course
+SCHEDULED: <2025-07-11 ven.>
+***
 * TODO Vérifier les frais de 2% sur Abeille et [[id:b808164a-fb3c-479a-9975-84d5d0ce32aa][PERP-SwissLife]]
 SCHEDULED: <2025-07-13 dim.>
 * TODO [#B] Passer au louvre pour prendre la carte louvre
