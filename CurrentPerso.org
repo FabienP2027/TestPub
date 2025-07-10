@@ -54,3 +54,6 @@ SCHEDULED: <2025-10-03 ven.>
 SCHEDULED: <2025-07-11 ven.>
 https://www.portestmartin.com/la-seconde-surprise-de-l-amour
 ** TODO Réserver theatre avec argent CSE et Glady mettre sur ticktack
+* PROJET Préparer stage Taichi
+** papier, crayon
+** QuotienEmotionnel
