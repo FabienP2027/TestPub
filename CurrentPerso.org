@@ -17,6 +17,7 @@ SCHEDULED: <2025-07-13 dim.>
 * TODO [#B] Passer au louvre pour prendre la carte louvre
 * TODO Ecouter https://www.radiofrance.fr/dossiers/france-culture-avec-vous-a-la-bnf-francois-mitterrand?at_campaign=apocalypse_hier_et_demain&at_medium=repreneurs&at_chaine=france_culture
 SCHEDULED: <2025-07-12 sam.>
+* TODO [#B] tester https://notebooklm.google.com/notebook/60c8abe9-91b6-43b5-9926-b8aa7a29d943?_gl=1*1w5felf*_ga*MTA1MDMxMTg1LjE3NTIyNDU1MzY.*_ga_W0LDH41ZCB*czE3NTIyNDU1MzYkbzEkZzEkdDE3NTIyNDU1MzYkajYwJGwwJGgw&original_referer=https:%2F%2Fnotebooklm.google%23&pli=1
 * PROJET Prélèvement BOTIN
 ** [2025-06-16 lun.]DONE Signer autorisation de prélèvements
 ** WAITING Autorisation de prélèvement dans [[id:470663f4-2c18-4457-925e-4317d9086639][SocieteGenerale]]
