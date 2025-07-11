@@ -5,6 +5,7 @@
 #+STARTUP: overview indent nologdone nologrepeat nolognoteclock-out nologreschedule nologredeadline nologrefile
 #+title: @CurrentPerso
 #+FILETAGS: @Personnel
+
 * Achat
 ** Decathlon
 *** TODO Acheter chaussure t'ai chi
